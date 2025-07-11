@@ -167,7 +167,7 @@
     <node.version>v12.19.0</node.version>
 
     <!-- Jooby  -->
-    <jooby.version>${project.version}</jooby.version>
+    <jooby.version>3.0.0</jooby.version>
     <jooby-maven-plugin.version>${jooby.version}</jooby-maven-plugin.version>
     <javadoc.excludes>io.jooby.internal.*</javadoc.excludes>
 
@@ -1416,10 +1416,8 @@
               </goals>
               <configuration>
                 <transformers>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${application.class}</mainClass>
                   </transformer>
                 </transformers>
