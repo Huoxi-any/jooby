@@ -22,7 +22,7 @@
     <freemarker.version>2.3.31</freemarker.version>
     <handlebars.version>4.3.0</handlebars.version>
     <pebble.version>3.1.5</pebble.version>
-    <jackson.version>2.13.4</jackson.version>
+    <jackson.version>2.15.0</jackson.version>
     <jackson-dataformat-yaml.version>${jackson.version}</jackson-dataformat-yaml.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
     <gson.version>2.9.1</gson.version>
@@ -1416,10 +1416,8 @@
               </goals>
               <configuration>
                 <transformers>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${application.class}</mainClass>
                   </transformer>
                 </transformers>
