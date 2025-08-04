@@ -5,7 +5,7 @@
 # - docker run -it jooby
 # - /build # mvn clean package
 
-FROM ubuntu:latest as ubuntu
+FROM ubuntu:24.10 as ubuntu
 
 # Install OpenJDK-8
 RUN apt-get update && \
