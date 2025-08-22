@@ -50,7 +50,7 @@
 
     <!-- dependency injection -->
     <weld.version>3.1.5.Final</weld.version>
-    <spring.version>5.3.20</spring.version>
+    <spring.version>6.2.10</spring.version>
     <guice.version>5.1.0</guice.version>
 
     <!-- logging -->
@@ -1416,10 +1416,8 @@
               </goals>
               <configuration>
                 <transformers>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${application.class}</mainClass>
                   </transformer>
                 </transformers>
