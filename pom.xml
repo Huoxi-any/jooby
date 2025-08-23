@@ -73,7 +73,7 @@
 
     <!-- Server -->
     <undertow.version>2.2.19.Final</undertow.version>
-    <jetty.version>11.0.11</jetty.version>
+    <jetty.version>11.0.26</jetty.version>
     <netty.version>4.1.82.Final</netty.version>
 
     <!-- Reactive -->
@@ -1416,10 +1416,8 @@
               </goals>
               <configuration>
                 <transformers>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${application.class}</mainClass>
                   </transformer>
                 </transformers>
