@@ -103,7 +103,7 @@
     <bucket4j-core.version>6.4.1</bucket4j-core.version>
     <aws-java-sdk.version>1.12.230</aws-java-sdk.version>
     <jmespath-java.version>${aws-java-sdk.version}</jmespath-java.version>
-    <frontend-plugin-core.version>1.12.1</frontend-plugin-core.version>
+    <frontend-plugin-core.version>1.13</frontend-plugin-core.version>
     <jasypt.version>1.9.3</jasypt.version>
 
     <commons-io.version>2.11.0</commons-io.version>
@@ -1416,10 +1416,8 @@
               </goals>
               <configuration>
                 <transformers>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                  <transformer
-                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <mainClass>${application.class}</mainClass>
                   </transformer>
                 </transformers>
